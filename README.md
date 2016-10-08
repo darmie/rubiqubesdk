@@ -6,7 +6,7 @@ RubiQube is a reward – based advertising platform that drives engagement and m
 
 ### Include rubiqube sdk in your gradle dependency
 Download and copy `rubiqubesdk.aar` file into your project's `libs` folder
-```
+```gradle
 dependencies {
   compile (name: 'rubiqubesdk', ext:'aar')
   compile 'com.android.support:appcompat-v7:23.3.0' //IMPORTANT: Rubiqube sdk depends on this library to work
@@ -16,7 +16,7 @@ dependencies {
 
 ### Initialize rubiqube sdk
 
-```
+```java
 import rubiqube.ng.rubiqubesdk.*;
 
 Ad rubiqube = Ad.getInstance();
@@ -31,7 +31,7 @@ Get your publisher and placement IDs from RubiQube website, the callback url wil
 
 ### Listen to RubiQube internal events
 
-```
+```java
 rubiqube.setOnAdListener( new Ad.OnAdListener(){
             @Override
             public void onFinished(){
